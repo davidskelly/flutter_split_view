@@ -263,6 +263,10 @@ class SplitViewState extends State<SplitView> {
     setState(_updatePages);
   }
 
+  Widget getSecondary() {
+    return _pageConfigs[_pageConfigs.length - 1].child;
+  }
+
   /// Sets the page displayed at seconday view. This clears all other pages on
   /// top of the page displayed at secondary view (aka 2nd page in the stack).
   void setSecondary(
