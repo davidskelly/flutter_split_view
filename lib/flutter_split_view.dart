@@ -263,7 +263,8 @@ class SplitViewState extends State<SplitView> {
     setState(_updatePages);
   }
 
-  Widget getSecondary() {
+  Widget? getSecondary() {
+    if (_pageConfigs.isEmpty) return null;
     return _pageConfigs[_pageConfigs.length - 1].child;
   }
 
